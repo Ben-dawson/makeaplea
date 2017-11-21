@@ -1,0 +1,156 @@
+// Path to assets for use with the file-url function
+// in the govuk frontend toolkit's url-helpers partial
+$path: "/public/images/";
+
+// Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
+// Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
+@import 'govuk-elements';
+
+// Take a look at in app/assets/sass/patterns/ to see which files are imported.
+@import 'patterns/check-your-answers';
+@import 'patterns/task-list';
+
+// Related items
+// (These styles will be moved to GOV.UK elements, duplicating here for now.)
+.govuk-related-items {
+  margin-top: $gutter;
+  border-top: 10px solid $govuk-blue;
+  padding-top: 5px;
+
+  .heading-medium {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+  }
+
+  li {
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+}
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+// Horizontal rules
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $border-colour;
+    margin: 0;
+    padding: 0;
+}
+
+// Advanced form elements
+
+.reveal-if-active {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+input[type="radio"]:checked ~ .reveal-if-active,
+input[type="checkbox"]:checked ~ .reveal-if-active {
+  opacity: 1;
+  max-height: 1000px;
+  overflow: visible;
+}
+
+// Show more/less
+.charge-detail {
+    display: none;
+}
+
+// Adding £ to form inputs
+.input-icon {
+  position: relative;
+}
+
+.input-icon > i {
+  position: absolute;
+  display: block;
+  transform: translate(0, -50%);
+  top: 50%;
+  pointer-events: none;
+  width: 25px;
+  text-align: center;
+	font-style: normal;
+}
+
+.input-icon > input {
+  padding-left: 25px;
+	padding-right: 0;
+}
+
+// Spacings
+
+.top_60 {
+    margin-top: 60px;
+}
+.top_30 {
+    margin-top: 30px;
+}
+.top_25 {
+    margin-top: 25px;
+}
+.top_20 {
+    margin-top: 20px;
+}
+.top_15 {
+    margin-top: 15px;
+}
+.top_10 {
+    margin-top: 10px;
+}
+.top_5 {
+    margin-top: 5px;
+}
+@media (min-width: 641px)
+{
+    .top_0 {
+        margin-top: 0px;
+    }
+}
+@media (min-width: 0px) and (max-width: 640px)
+{
+    .top_0 {
+        margin-top: 30px;
+    }
+}
+
+.bottom_60 {
+    margin-bottom: 60px;
+}
+.bottom_30 {
+    margin-bottom: 30px;
+}
+.bottom_25 {
+    margin-bottom: 25px;
+}
+.bottom_20 {
+    margin-bottom: 20px;
+}
+.bottom_15 {
+    margin-bottom: 15px;
+}
+.bottom_10 {
+    margin-bottom: 10px;
+}
+.bottom_5 {
+    margin-bottom: 5px;
+}
+.bottom_0 {
+    margin-bottom: 0px;
+}
+
+.width_50 {
+    width: 50%;
+}
+.width_75 {
+    width: 75%;
+}
+.width_100 {
+    width: 100%;
+}
+.width_postcode {
+    width: 150px;
+}

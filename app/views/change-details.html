@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Your details
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+<div class="phase-banner">
+  <p>
+    <strong class="phase-tag">ALPHA</strong>
+    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+    
+    <div class="breadcrumbs">
+        <ol>
+            <li><a href="javascript:history.go(-1);">Back</a></li>
+        </ol>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            
+            <h1 class="heading-xlarge">Change your details</h1>
+
+            <h2 class="heading-medium">Change your name and address</h2>
+
+
+            
+            <form class="form" action="" method="post">
+                <div class="form-group">
+                    
+                        <div class="name-address-fields">
+
+                            <p class="heading-small">Changes to name</p>
+                            <span class="form-hint">The court will check any name changes</span>
+                            <p class="top_15 bottom_5">First name</p>
+                            <input class="form-control" id="first-name" type="text" name="first-name" value="Sam" autocomplete="off" autocorrect="off" spellcheck="false">
+                            <p class="top_15 bottom_5">Last name</p>
+                            <input class="form-control" id="last-name" type="text" name="last-name" value="Smith" autocomplete="off" autocorrect="off" spellcheck="false">
+                        </div>
+
+                        <div>
+                            <p class="heading-small">Changes to address</p>
+                            <span class="form-hint">The court will check your change of address</span>
+                            <p class="top_15 bottom_5">Address</p>
+                            <input class="form-control bottom_10" id="address-line-1" type="text" autocomplete="off" autocorrect="off" spellcheck="false" name="address-line-1" value="38A Baker Street">
+                            <input class="form-control bottom_10" id="address-line-2" type="text" autocomplete="off" autocorrect="off" spellcheck="false" name="address-line-2">
+                            <input class="form-control" id="address-line-3" type="text" autocomplete="off" autocorrect="off" spellcheck="false" name="address-line-3">
+                            <p class="top_15 bottom_5">Town or city</p>
+                            <input class="form-control bottom_10" id="town-or-city" type="text" autocomplete="off" autocorrect="off" spellcheck="false" name="town-or-city" value="London">
+                            <p class="top_15 bottom_5">County (optional)</p>
+                            <input class="form-control bottom_10" id="county" type="text" name="county">
+                            <p class="top_15 bottom_5">Postcode</p>
+                            <input class="form-control bottom_10" id="postcode" type="text" autocomplete="off" autocorrect="off" spellcheck="false" name="postcode" value="W1 7SX">
+                        </div>
+                
+                        <div class="form-group top_30">
+                            <input class="button" type="submit" value="Continue">
+                            <p class="top_15"><a href="javascript:history.go(-1);">Back</a></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+        
+            <div class="column-third">
+                <aside class="govuk-related-items" role="complementary">
+                    <h2 class="heading-medium" id="subsection-title">Further links</h2>
+                    <nav role="navigation" aria-labelledby="subsection-title">
+                    <ul class="font-xsmall">
+                        <li><a href="/help-and-advice">Help and advice</a></li>
+                    </ul>
+                    </nav>
+                </aside>
+            </div>
+        
+        </div>
+    
+</main>
+
+{% endblock %}

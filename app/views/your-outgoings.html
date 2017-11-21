@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Your outgoings
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+    <div class="phase-banner">
+     <p>
+     <strong class="phase-tag">ALPHA</strong>
+     <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+     </p>
+    </div>
+    
+    <div class="breadcrumbs">
+        <ol>
+        <li><a href="javascript:history.go(-1);">Back</a></li>
+        </ol>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            
+            <form class="form" action="" method="post" onsubmit="InsertDefaultValues()">
+                <div class="form-group">
+                    <fieldset class="inline">
+                        <legend>
+                            <h1 class="heading-xlarge">Your outgoings</h1>
+                        </legend>
+
+                        <fieldset>
+                            <h2 class="heading-small bottom_10">Would you like to give details of your monthly bills?</h2>
+                            <p class="form-hint">Magistrates can take your outgoings into account when deciding how long you should get to pay a penalty</p>
+                        </fieldset>
+                        <fieldset>
+                            <div class="multiple-choice ">
+                                <input id="radio-1" type="radio" name="your-outgoings-group" value="1">
+                                <label for="radio-1">Yes</label>
+                            </div>
+                            <div class="multiple-choice">
+                                <input id="radio-2" type="radio" name="your-outgoings-group" value="2">
+                                <label for="radio-2">No</label>
+                            </div>
+                        </fieldset>
+                </div>
+                        
+   
+                <div class="form-group, notice top_30 bottom_30">
+                    <input class="button" type="submit" value="Continue">
+                    <p class="top_15"><a href="javascript:history.go(-1);">Back</a></p>
+                </div>
+                
+            </form>
+        </div>
+        
+        <div class="column-third">
+            <aside class="govuk-related-items" role="complementary">
+                <h2 class="heading-medium" id="subsection-title">Further links</h2>
+                <nav role="navigation" aria-labelledby="subsection-title">
+                <ul class="font-xsmall">
+                    <li><a href="/help-and-advice">Help and advice</a></li>
+                </ul>
+                </nav>
+            </aside>
+        </div>
+        
+    </div>
+    
+</main>
+
+<script type="text/javascript">
+    function InsertDefaultValues()
+    {
+       // Leave this line as is. Customization follows.
+       var FieldsAndDefault = new Array();
+
+       // Customization:
+       // For each field that will have custom information is 
+       //   submitted blank, use this format:
+       //     FieldsAndDefault.push("FieldIDvalue Default value");
+
+       FieldsAndDefault.push("accomodation 0");
+       FieldsAndDefault.push("council-tax 0");
+       FieldsAndDefault.push("household-bills 0");
+       FieldsAndDefault.push("travel-expeneses 0");
+       FieldsAndDefault.push("child-maintenance 0");
+
+       // End of customization.
+       ///////////////////////////////////////
+       for( var i=0; i<FieldsAndDefault.length; i++ )
+       {
+          FieldsAndDefault[i] = FieldsAndDefault[i].replace(/^\s*/,"");
+          var pieces = FieldsAndDefault[i].split(" ");
+          var field = pieces.shift();
+          var f = document.getElementById(field);
+          if( f.value.length < 1 ) { f.value = pieces.join(" "); }
+       }
+       return true;
+    }
+</script>
+
+{% endblock %}

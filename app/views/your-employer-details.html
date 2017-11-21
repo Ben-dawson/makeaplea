@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Your employer details
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+    <div class="phase-banner">
+     <p>
+     <strong class="phase-tag">ALPHA</strong>
+     <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+     </p>
+    </div>
+    
+    <div class="breadcrumbs">
+        <ol>
+            <li><a href="javascript:history.go(-1);">Back</a></li>
+        </ol>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            
+            <form class="form" action="" method="post">
+                <div class="form-group">
+                    <fieldset class="inline">
+                        <legend>
+                            <h1 class="heading-xlarge">Your employment</h1>
+                        </legend>
+                        
+                        <fieldset class="bottom_15">
+                            <label class="form-label" for="employer-number">Employee reference (optional)
+                              <span class="form-hint">
+                                Also known as Employee number or Payroll reference. 
+                                <br>
+                                This should be on your payslip.
+                              </span>
+                            </label>
+                            <input class="form-control" id="employer-number" type="text" autocomplete="off" autocorrect="off" spellcheck="false" name="employer-number">
+                        </fieldset>
+                    
+
+                        <fieldset class="bottom_15">
+                            <label class="form-label" for="employer-name">Employer name</label>
+                            <input class="form-control width_75" id="employer-name" type="text" autocomplete="off" autocorrect="off" spellcheck="false" name="employer-name">
+                        </fieldset>
+
+                        <legend>
+                            <h2 class="heading-medium">Employer's address</h1>
+                        </legend>
+
+                        <fieldset class="bottom_15">
+                            <details class="top_15">
+                                <summary>
+                                    <span class="summary">Which address should I include?
+                                    </span>
+                                </summary>
+                                <div class="panel panel-border-wide">
+                                    <p class="bottom_10">Enter the head office or where your payroll is managed.
+                                    </p>
+                                </div>
+                            </details>
+                        </fieldset>
+                        
+                        <fieldset class="bottom_15">
+                            <label class="form-label" for="employer-address">Building and street</label>
+                            <input class="form-control bottom_10 width_75" id="employer-address-1" type="text" autocomplete="off" autocorrect="off" spellcheck="false" name="employer-address-1">
+                            <input class="form-control bottom_10 width_75" id="employer-address-2" type="text" autocomplete="off" autocorrect="off" spellcheck="false" name="employer-address-2">
+                        </fieldset>
+                        
+                        <fieldset class="bottom_15">
+                            <label class="form-label" for="employer-city-name">Town or city</label>
+                            <input class="form-control width_75" id="employer-city-name" type="text" autocomplete="off" autocorrect="off" spellcheck="false" name="employer-city-name">
+                        </fieldset>
+                      
+                        <fieldset class="bottom_15">
+                            <label class="form-label" for="employer-county">County (optional)</label>
+                            <input class="form-control width_75" id="employer-city-name" type="text" autocomplete="off" autocorrect="off" spellcheck="false" name="employer-city-name">
+                        </fieldset>                          
+
+
+                        <fieldset class="bottom_15">
+                            <label class="form-label" for="employer-postcode">Postcode</label>
+                            <input class="form-control width_postcode" id="employer-postcode" type="text" autocapitalize="characters" autocomplete="off" autocorrect="off" spellcheck="false" name="employer-postcode">
+                        </fieldset>   
+
+
+                         <fieldset>
+                            <label class="form-label" for="employer-telephone">Employer telephone (optional)
+                            </label>
+                            <input class="form-control" id="employer-telephone" type="tel" autocorrect="off" autocomplete="tel" name="employer-telephone">
+                        </fieldset>
+
+                    </fieldset>
+                </div>
+                
+                <div class="form-group">
+                    <input class="button" type="submit" value="Continue">
+                    <p class="top_15"><a href="javascript:history.go(-1);">Back</a></p>
+                </div>
+                
+            </form>
+        </div>
+        
+        <div class="column-third">
+            <aside class="govuk-related-items" role="complementary">
+                <h2 class="heading-medium" id="subsection-title">Further links</h2>
+                <nav role="navigation" aria-labelledby="subsection-title">
+                <ul class="font-xsmall">
+                    <li><a href="/help-and-advice">Help and advice</a></li>
+                </ul>
+                </nav>
+            </aside>
+        </div>
+        
+    </div>
+    
+</main>
+
+{% endblock %}

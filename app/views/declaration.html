@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Declaration
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+<div class="phase-banner">
+  <p>
+    <strong class="phase-tag">ALPHA</strong>
+    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <a href="#" class="javascript:history.go(-1);">Back</a>
+
+            <form class="form" action="" method="post">
+                <div class="form-group">
+                  <fieldset>
+
+                    <legend>
+                      <h4 class="heading-xlarge">Declaration</h4>
+                    </legend>
+
+                    <p class="bottom_5">I confirm that:</p>
+                    <ul class="list list-bullet">
+                      <li>I’ve read and understand the charges against me</li>
+                      <li>I’m the person named in the Single Justice Procedure notice</li>
+                      <li>the facts I’ve given are correct as far as I know</li>
+                    </ul>
+
+                    <div class="notice top_60 bottom_60">
+                      <i class="icon icon-important">
+                        <span class="visually-hidden">Warning</span>
+                      </i>
+                      <strong class="bold-medium">
+                        You may be prosecuted if you make a false statement or deliberately don’t declare all relevant facts
+                      </strong>
+                    </div>
+
+                    <div class="multiple-choice" class="top_0">
+                      <input id="i-confirm" name="confirmation-group" type="checkbox" value="1">
+                      <label for="i-confirm">I confirm</label>
+                    </div>
+                      
+                  </fieldset>
+                </div>
+                
+                <div class="form-group top_30">
+                    <input class="button" type="submit" value="Confirm and continue">
+                    <p class="top_15"><a href="javascript:history.go(-1);">Back</a></p>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Find your case
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+<div class="phase-banner">
+  <p>
+    <strong class="phase-tag">ALPHA</strong>
+    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+    
+    <div class="breadcrumbs">
+        <ol>
+            <li><a href="javascript:history.go(-1);">Back</a></li>
+        </ol>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            
+            <div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+                <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+                Fix the following
+                </h2>
+                <ul class="error-summary-list">
+                    <li><a href="#error">Case or Unique Reference Number</a></li>
+                </ul>
+            </div>
+            
+            <form class="form" action="" method="post">
+                
+                <div class="form-group">
+                    <fieldset>
+                        <legend>
+                            <h1 class="heading-xlarge">Find your case</h1>
+                        </legend>
+
+                        <div class="form-group form-group-error" id="error">
+                            <label class="form-label" for="case-urn-number">
+                                <span class="heading-small">Case or Unique Reference Number</span>
+                                <span class="error-message bottom_5">Enter a valid number. Contact the <a href="#" style="color: #B10E1E">Customer Contact Centre</a> if you don’t know it</span>
+                            </label>
+                            <input class="form-control" id="case-urn-number" type="text" name="case-urn-number" value="123">
+
+                            <details class="top_15">
+                                <summary>
+                                    <span class="summary">Where to find this on your notice</span>
+                                </summary>
+                                <div class="panel panel-border-narrow">
+                                    <p><img src="/public/images/Where-to-find-large-2x.png" width="100%"></p>
+                                </div>
+                            </details>
+                        </div>
+                        
+                        <label class="form-label top_15" for="your-postcode">
+                            <span class="heading-small">Your postcode, as shown on your notice</span>
+                        </label>
+                        <input class="form-control" id="your-postcode" type="text" name="your-postcode">
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <input class="button" type="submit" value="Continue">
+                    <p class="top_15"><a href="javascript:history.go(-1);">Back</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="column-third">
+            <aside class="govuk-related-items" role="complementary">
+                <h2 class="heading-medium" id="subsection-title">Further links</h2>
+                <nav role="navigation" aria-labelledby="subsection-title">
+                    <ul class="font-xsmall">
+                        <li><a href="/help-and-advice">Help and advice</a></li>
+                    </ul>
+                </nav>
+            </aside>      
+        </div>
+        
+    </div>
+
+</main>
+
+{% endblock %}
