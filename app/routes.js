@@ -16,20 +16,32 @@ module.exports = router
 // Find your case
 router.post('/find-your-case', function (req, res) {
 
-    var caseurnnumber = req.session.data ['case-urn-number']
+    var caseurnnumber = req.session.data['case-urn-number']
 
-switch (caseurnnumber) {
-    case "TFL", "tfl", "Tfl":
-        res.redirect ('/your-details');
-        break;
-    case "TVL", "tvl", "Tvl":
+    if ((caseurnnumber == "TVL") || (caseurnnumber == "tvl") || (caseurnnumber == "TvL")) {
         res.redirect ('/your-details-tvl');
-        break;
-    case "DVLA", "dvla", "Dvla":
+    } else if ((caseurnnumber == "DVLA") || (caseurnnumber == "dvla") || (caseurnnumber == "Dvla")) {
         res.redirect ('/your-details-dvla');
-        break;
-    default: res.redirect ('/your-details');
-}})
+    } else {
+        res.redirect ('/your-details');
+    }
+})
+    
+
+    /*
+    switch (caseurnnumber) {
+        case "TFL", "tfl", "Tfl":
+            res.redirect ('/your-details');
+            break;
+        case "TVL", "tvl", "Tvl":
+            res.redirect ('/your-details-tvl');
+            break;
+        case "DVLA", "dvla", "Dvla":
+            res.redirect ('/your-details-dvla');
+            break;
+        default: res.redirect ('/your-details');
+    }
+    */
 
     /*
     var caseURNValidation  = req.session.data['case-urn-number']
@@ -55,7 +67,7 @@ switch (caseurnnumber) {
 // Your details
 router.post('/your-details', function (req, res) {
 
-var nameAddressGroup = req.session.data ['name-address-group']
+var nameAddressGroup = req.session.data ['name-address-group'];
 
 if (nameAddressGroup == "2") {
     res.redirect('/your-plea')
@@ -74,11 +86,11 @@ router.post('/your-details-dvla', function (req, res) {
 var nameAddressGroup = req.session.data ['name-address-group']
 
 if (nameAddressGroup == "2") {
-    res.redirect('/your-plea-dvla')
+    res.redirect('/your-plea')
 }
 
 else {
-    res.redirect('/your-plea-dvla')
+    res.redirect('/your-plea')
 }
 
 })
@@ -90,11 +102,11 @@ router.post('/your-details-tvl', function (req, res) {
 var nameAddressGroup = req.session.data ['name-address-group']
 
 if (nameAddressGroup == "2") {
-    res.redirect('/your-plea-TVL')
+    res.redirect('/your-plea')
 }
 
 else {
-    res.redirect('/your-plea-TVL')
+    res.redirect('/your-plea')
 }
 
 })
@@ -248,7 +260,7 @@ router.post('/change-details-tvl', function (req, res) {
     
 })
 
-    // ************
+// ************
 // Change details dvla
 router.post('/change-details-dvla', function (req, res) {
         
@@ -411,11 +423,10 @@ router.post('/change-details-dvla', function (req, res) {
 
 
 // **********
-// Your plea TFL
-
+// Your plea
 
 router.post('/your-plea', function (req, res) {
-
+    
   var howDoYouPlea = req.session.data['how-do-you-plea']
   var pleaValidation = ""
   
@@ -467,7 +478,7 @@ router.post('/your-plea-error', function (req, res) {
 // **********
 // Your plea TVL
 
-
+/*
 router.post('/your-plea-TVL', function (req, res) {
 
   var howDoYouPlea = req.session.data['how-do-you-plea']
@@ -517,11 +528,11 @@ router.post('/your-plea-error', function (req, res) {
   }
 
 })
+*/
 
 // **********
 // Your plea DVLA
-
-
+/*
 router.post('/your-plea-dvla', function (req, res) {
 
   var howDoYouPlea = req.session.data['how-do-you-plea']
@@ -571,7 +582,7 @@ router.post('/your-plea-error', function (req, res) {
   }
 
 })
-
+*/
 
 // ***********
 // Guilty plea
