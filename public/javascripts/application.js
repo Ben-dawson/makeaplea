@@ -34,12 +34,6 @@ $('input[name="NIN-radio-inline-group"]').on('change', function() {
 
 // *********
 // Your plea
-  //$('tfl-charge-summary').style.display = 'none';
-  //$('tfl-charge-summary').style.visibility = 'hidden';
-
-
-
-
 
 $('input[name="how-do-you-plea"]').on('change', function() {
   $('.guilty-plea-fields')

@@ -424,7 +424,6 @@ router.post('/change-details-dvla', function (req, res) {
 
 // **********
 // Your plea
-
 router.post('/your-plea', function (req, res) {
     
   var howDoYouPlea = req.session.data['how-do-you-plea']
